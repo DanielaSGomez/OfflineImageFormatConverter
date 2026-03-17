@@ -18,8 +18,7 @@ def convertir():
 
     try:
         img = Image.open(archivo)
-
-        # Para ICO conviene redimensionar a 256x256
+        
         if salida_formato == "ICO":
             img = img.resize((256, 256))
 
@@ -30,7 +29,6 @@ def convertir():
     except Exception as e:
         messagebox.showerror("Error", f"No se pudo convertir la imagen:\n{e}")
 
-# Interfaz gráfica
 root = tk.Tk()
 root.title("Conversor de Imágenes")
 
